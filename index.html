@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Froggy Taipei Error Page</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="title">服務維護中</div>
+            <div class="content">台北市議員邱威傑選民服務系統維護中... <br> 請稍後再試或聯絡相關人員</div>
+        </div>
+        <div class="img-wrapper">
+            <img class="image" src="https://storage.googleapis.com/froggy-service/frontend/errorPage/%E5%85%A8%E8%BA%AB01%20s.png" alt="froggyImage">
+            <div class="shadow"></div>
+        </div>
+    </div>
+</body>
+<style>
+    html,body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-weight: bold;    
+    }
+
+    body{
+        background-image: linear-gradient(#EFCACD, #DE8F95, #C480A2, #B69FC6, #A2CEE5, #FFFFFF);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: scroll;
+        flex-direction: column;
+    }
+
+    .main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white
+    }
+
+    .img-wrapper{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        width: 80%;
+        height: 100%;
+        max-width: 250px;
+        z-index: 0
+    }
+
+    .shadow{
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        transform: translateX(5px);
+        height: 10%;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.3);
+        z-index: -1;
+        filter: blur(5px)
+    }
+
+    .main-content{
+        transform: translateY(calc(5vh));
+        z-index: 1;
+    }
+
+    .title, .content{
+        text-align: center;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+
+    .content{
+        font-size: 2em;
+    }
+
+    @media (max-width: 480px){
+        .title{
+            font-size: 2em;
+        }
+
+        .content{
+            font-size: 1em;
+        }   
+    }
+    
+</style>
+</html>
